@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesaler Customer Cluster Label Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    
+</head>
+<body>
+  <header>
+    <h1>WHOLESALE CUSTOMER CLUSTER LABEL PREDICTION</h1>
+  </header>
+  <main>
+    
+    <div class="login">
+         <h3> Enter the following values to predict the Wholesale Customer Cluster Label Prediction</h3>
+    
+         <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="POST">
+            <input type="text" name="Region" placeholder="Region" required="required" />
+            <input type="text" name="Fresh" placeholder="Fresh" required="required" />
+            <input type="text" name="Milk" placeholder="Milk" required="required" />
+            <input type="text" name="Grocery" placeholder="Grocery" required="required" />
+            <input type="text" name="Frozen" placeholder="Frozen" required="required" />
+            <input type="text" name="Detergents_Paper" placeholder="Detergents_Paper" required="required" />
+            <input type="text" name="Delicassen" placeholder="Delicassen" required="required" />
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    
+       <br>
+       <br>
+       {{ predict }}
+     </div>
+     
+    
+  </main>
+
+  <footer>
+    <p>Wholesaler Customer Cluster Label Prediction</p>
+  </footer>
+</body>
+</html>
